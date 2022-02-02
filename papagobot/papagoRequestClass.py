@@ -5,12 +5,10 @@ from urllib.request import Request,urlopen
 
 
 DataDictionary = {
-    "!한영번역" : ["ko","Korean","en","English"],
-    "!영한번역" : ["en", "English","ko","Korean"],
-    "!한일번역" : ["ko","Korean","ja","Japanese"],
-    "!일한번역" : ["ja","Japanese", "ko","Korean"],
-    "!한중번역" : ["ko","Korean","zh-CN","Chinese"],
-    "!중한번역" : ["zh-CN","Korean","ko","Korean"]
+    "!ke" : ["ko","Korean","en","English"],
+    "!ek" : ["en", "English","ko","Korean"],
+    "!kj" : ["ko","Korean","ja","Japanese"],
+    "!jk" : ["ja","Japanese", "ko","Korean"],
 }
 
 class dataProcessStream(object):
