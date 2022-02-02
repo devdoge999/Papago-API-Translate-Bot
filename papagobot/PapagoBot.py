@@ -35,8 +35,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
     def sendmsg(resultPackage) -> discord.Embed:
         if resultPackage['status']["code"] < 300:
             embed = discord.Embed(title=f"{resultPackage['data']['ntl']['name']} -> {resultPackage['data']['tl']['name']}",description="", color=0x5CD1E5)
-            embed.add_field(name=f"{resultPackage['data']['ntl']['name']} to translate", value=resultPackage['data']['ntl']['text'],inline=False)
-            embed.add_field(name=f"Translated {resultPackage['data']['tl']['name']}", value=resultPackage['data']['tl']['text'],inline=False)
+            embed.add_field(name=f"{resultPackage['data']['ntl']['text']}", value=resultPackage['data']['tl']['text'],inline=False)
             return embed
         else:
             embed = discord.Embed(title="Error Code", description=resultPackage['status']['code'],color=0x5CD1E5)
@@ -54,7 +53,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
             if len(trsText) != 1:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
-                await message.channel.send("Translate complete", embed=embedInstance)
+                await message.channel.send(embed=embedInstance)
         except HTTPError as e:
             await message.channel.send(f"Translate Failed. HTTPError Occured : {e}")
 
@@ -66,7 +65,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
             if len(trsText) != 1:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
-                await message.channel.send("Translate complete", embed=embedInstance)
+                await message.channel.send(embed=embedInstance)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -78,7 +77,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
             if len(trsText) != 1:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
-                await message.channel.send("Translate complete", embed=embedInstance)
+                await message.channel.send(embed=embedInstance)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -90,7 +89,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
             if len(trsText) != 1:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
-                await message.channel.send("Translate complete", embed=embedInstance)
+                await message.channel.send(embed=embedInstance)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
