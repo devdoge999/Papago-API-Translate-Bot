@@ -1,4 +1,4 @@
-Papago Teacher based on Papago-API-Translate-Bot
+# Papago Teacher based on Papago-API-Translate-Bot
 
 - Check out the readme of the original project below.
 ===
