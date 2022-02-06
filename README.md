@@ -2,8 +2,8 @@
 ### based on Papago-API-Translate-Bot
 
 
-Discord.py 1.0.0
-[Naver Open API](https://developers.naver.com/main/)
+- Discord.py 1.0.0
+- [Naver Open API](https://developers.naver.com/main/)
 
 
 ```
