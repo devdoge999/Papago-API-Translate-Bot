@@ -1,3 +1,8 @@
+Papago Teacher based on Papago-API-Translate-Bot
+
+- Check out the readme of the original project below.
+===
+
 Discord Bot : Translation bot using papago API
 ===
 
